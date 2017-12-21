@@ -1,0 +1,345 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "Gotham";
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham/Gotham-Book.otf") format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham/Gotham-Bold.otf") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham/Gotham-Light.otf") format('opentype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham/Gotham-Medium.otf") format('opentype');
+   	font-weight: 500;
+}
+
+#profileContainer{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	//hexagon image
+	#profileImageHexagon {
+		position: absolute;
+		width: 137px; 
+		height: 79.10px;
+		margin: 39.55px 0;
+		background-image: url(http://www.math.uni-frankfurt.de/~person/_4170854.jpg);;
+		background-size: auto 158.1940px;
+		background-position: center;
+		z-index: 1;
+		left: 50%;
+		transform: translate(-50%,12.5px);
+
+		#hexImageTop,
+		#hexImageBottom {
+			position: absolute;
+			z-index: 1;
+			width: 96.87px;
+			height: 96.87px;
+			overflow: hidden;
+			-webkit-transform: scaleY(0.5774) rotate(-45deg);
+			-ms-transform: scaleY(0.5774) rotate(-45deg);
+			transform: scaleY(0.5774) rotate(-45deg);
+			background: inherit;
+			left: 20.06px;
+		}
+
+		/*counter transform the bg image on the caps*/
+		#hexImageTop:after,
+		#hexImageBottom:after {
+			content: "";
+			position: absolute;
+			width: 137.0000px;
+			height: 79.09698687897874px;
+			-webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
+			-ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
+			transform:          rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
+			-webkit-transform-origin: 0 0;
+			-ms-transform-origin: 0 0;
+			transform-origin: 0 0;
+			background: inherit;	
+		}
+
+		#hexImageTop {
+			top: -48.4368px;
+		}
+
+		#hexImageTop:after {
+			background-position: center top;
+		}
+
+		#hexImageBottom {
+			bottom: -48.4368px;
+		}
+
+		#hexImageBottom:after {
+			background-position: center bottom;
+		}
+
+		.hexagon:after {
+			content: "";
+			position: absolute;
+			top: 0.0000px;
+			left: 0;
+			width: 137.0000px;
+			height: 79.0970px;
+			z-index: 2;
+			background: inherit;
+		}
+	}
+
+	#hexagonContainer{
+		position: relative;
+		width: 275px;
+		height: 92.38px;
+		padding-top: 1px;
+		overflow: hidden;
+		#hexagonTopHalf {
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 160px; 
+			height: 92.38px;
+			background-color: #ffffff;
+			margin: 46.19px 0;
+			border-left: solid 1px #333333;
+			border-right: solid 1px #333333;
+		}
+		#hexagonTopHalf:before,
+		#hexagonTopHalf:after {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			width: 113.14px;
+			height: 113.14px;
+			-webkit-transform: scaleY(0.5774) rotate(-45deg);
+			-ms-transform: scaleY(0.5774) rotate(-45deg);
+			transform: scaleY(0.5774) rotate(-45deg);
+			background-color: inherit;
+			left: 22.4315px;
+		}
+
+		#hexagonTopHalf:before {
+			top: -56.5685px;
+			border-top: solid 1.4142px #333333;
+			border-right: solid 1.4142px #333333;
+		}
+
+		#hexagonTopHalf:after {
+			bottom: -56.5685px;
+			border-bottom: solid 1.4142px #333333;
+			border-left: solid 1.4;
+		}
+	}
+	#rectangle{
+		position: relative;
+		width: 275px;
+		height: 400px;
+		overflow: hidden;
+		#background{
+			position: relative;
+			width: 100%;
+			height: 350px;
+			background-color: #303642;
+		}
+		#hexagonBottomHalf {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%,-92.38px);
+			width: 160px; 
+			height: 92.38px;
+			background-color: #303642;
+			margin: 46.19px 0;
+			border-left: solid 1px #ffffff;
+			border-right: solid 1px #ffffff;
+		}
+		#hexagonBottomHalf:before,
+		#hexagonBottomHalf:after {
+			content: "";
+			position: absolute;
+			z-index: 1;
+			width: 113.14px;
+			height: 113.14px;
+			-webkit-transform: scaleY(0.5774) rotate(-45deg);
+			-ms-transform: scaleY(0.5774) rotate(-45deg);
+			transform: scaleY(0.5774) rotate(-45deg);
+			background-color: inherit;
+			left: 22.4315px;
+		}
+		#hexagonBottomHalf:before {
+			top: -56.5685px;
+			border-top: solid 1.4142px #ffffff;
+			border-right: solid 1.4142px #ffffff;
+		}
+		#hexagonBottomHalf:after {
+			bottom: -56.5685px;
+			border-bottom: solid 1.4142px #ffffff;
+			border-left: solid 1.4142px #ffffff;
+		}
+
+		#whiteBorder{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			width: 250px;
+			height: 375px;
+			border: 1px solid white;
+			
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			#profileIconContainer{
+				width: 100%;
+
+				//centering the icon
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				
+				//spacing
+				margin-top: 110px;
+				margin-bottom: 15px;
+
+				#profileIcon{
+					color: #828999;
+					font-size: 1.9em;
+				}
+			}
+			#levelContainer{
+				height: 20px;
+				width: 100%;
+				margin-top: 15px;
+				margin-bottom: 15px;
+
+				//used for centering the text;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				p{
+					font-weight: 100;
+					color: white;
+					font-size: 1em;
+				}
+			}
+			#horizontalDivider{
+				height: 1px;
+				width: 120px;
+				background-color: white;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			#nameContainer{
+				width: 100%;
+				height: 20px;
+
+				//spacing
+				margin-top: 15px;
+				margin-bottom: 2.5px;
+
+				//used for centering the text;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				p{
+					font-weight: 100;
+					color: white;
+					font-size: 1em;
+				}
+			}
+			#emailContainer{
+				width: 100%;
+				height: 10px;
+
+				//spacing
+				margin-top: 2.5px;
+
+				//used for centering the text;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				p{
+					font-weight: 100;
+					color: white;
+					font-size: 0.65em;
+				}
+			}
+		}
+
+		#socialMediaContainer{
+			position: relative;
+			bottom: 0;
+			width: 275px;
+			height: 50px;
+			#flexWrapper{
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				.socialCenter{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				.socialColor{
+					color: white;
+					font-size: 1.2em;
+					transform: translateY(1px);
+				}
+				#facebook{
+					flex: 1;
+					background-color: #3b5998;
+				}
+				#linkedin{
+					flex: 1;
+					background-color: #0077b5;
+
+				}
+				#googlePlus{
+					flex: 1;
+					background-color: #c71610;
+				}
+			}
+
+
+		}
+
+	}
+}
+
+
+
+
+
+
