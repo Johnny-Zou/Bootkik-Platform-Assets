@@ -12,76 +12,22 @@
 //hex image block
 .hexagonImage{
 	position: absolute;
-	width: 137px; 
-	height: 79.10px;
-	margin: 39.55px 0;
+
 	background-image: url(http://www.math.uni-frankfurt.de/~person/_4170854.jpg);;
-	background-size: auto 158.1940px;
+	background-size: auto 160px;
 	background-position: center;
+	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
-	&:after{
-		content: "";
-		position: absolute;
-		top: 0.0000px;
-		left: 0;
-		width: 137.0000px;
-		height: 79.0970px;
-		z-index: 2;
-		background: inherit;
-	}
-
-	//modifiers
+	// //modifiers
 	&.hexagonImage--profile{
+		width: 140px;
+		height: 160px;
 		z-index: 1;
 		left: 50%;
 		transform: translate(-50%,12.5px);
 	}
 }
-
-	//elements for the hexagon Image
-	.hexagonImage__imageTop, 
-	.hexagonImage__imageBottom {
-		position: absolute;
-		z-index: 1;
-		width: 96.87px;
-		height: 96.87px;
-		overflow: hidden;
-		-webkit-transform: scaleY(0.5774) rotate(-45deg);
-		-ms-transform: scaleY(0.5774) rotate(-45deg);
-		transform: scaleY(0.5774) rotate(-45deg);
-		background: inherit;
-		left: 20.06px;
-		
-		&:after{
-			content: "";
-			position: absolute;
-			width: 137.0000px;
-			height: 79.09698687897874px;
-			-webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
-			-ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
-			transform:          rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
-			-webkit-transform-origin: 0 0;
-			-ms-transform-origin: 0 0;
-			transform-origin: 0 0;
-			background: inherit;
-		}
-
-	}
-
-	.hexagonImage__imageTop{
-		top: -48.4368px;
-		&:after{
-			background-position: center top;
-		}
-	}
-	.hexagonImage__imageBottom{
-		bottom: -48.4368px;
-		&:after{
-			background-position: center bottom;
-		}
-	}
-
-
 
 //hexagon border elements
 .profileCard__hexagonBorderContainer{
@@ -223,6 +169,7 @@
 
 	&.iconContainer--profileSocial{
 		flex: 1;
+		backface-visibility: hidden;
 	}
 
 	&.iconContainer--facebook{

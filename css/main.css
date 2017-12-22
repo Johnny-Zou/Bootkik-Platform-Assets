@@ -6,61 +6,17 @@
 
 .hexagonImage {
   position: absolute;
-  width: 137px;
-  height: 79.10px;
-  margin: 39.55px 0;
   background-image: url(http://www.math.uni-frankfurt.de/~person/_4170854.jpg);
-  background-size: auto 158.1940px;
-  background-position: center; }
-  .hexagonImage:after {
-    content: "";
-    position: absolute;
-    top: 0.0000px;
-    left: 0;
-    width: 137.0000px;
-    height: 79.0970px;
-    z-index: 2;
-    background: inherit; }
+  background-size: auto 160px;
+  background-position: center;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
   .hexagonImage.hexagonImage--profile {
+    width: 140px;
+    height: 160px;
     z-index: 1;
     left: 50%;
     transform: translate(-50%, 12.5px); }
-
-.hexagonImage__imageTop,
-.hexagonImage__imageBottom {
-  position: absolute;
-  z-index: 1;
-  width: 96.87px;
-  height: 96.87px;
-  overflow: hidden;
-  -webkit-transform: scaleY(0.5774) rotate(-45deg);
-  -ms-transform: scaleY(0.5774) rotate(-45deg);
-  transform: scaleY(0.5774) rotate(-45deg);
-  background: inherit;
-  left: 20.06px; }
-  .hexagonImage__imageTop:after,
-  .hexagonImage__imageBottom:after {
-    content: "";
-    position: absolute;
-    width: 137.0000px;
-    height: 79.09698687897874px;
-    -webkit-transform: rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
-    -ms-transform: rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
-    transform: rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
-    -webkit-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
-    background: inherit; }
-
-.hexagonImage__imageTop {
-  top: -48.4368px; }
-  .hexagonImage__imageTop:after {
-    background-position: center top; }
-
-.hexagonImage__imageBottom {
-  bottom: -48.4368px; }
-  .hexagonImage__imageBottom:after {
-    background-position: center bottom; }
 
 .profileCard__hexagonBorderContainer {
   position: relative;
@@ -165,7 +121,8 @@
   margin-top: 100px;
   margin-bottom: 15px; }
 .iconContainer.iconContainer--profileSocial {
-  flex: 1; }
+  flex: 1;
+  backface-visibility: hidden; }
 .iconContainer.iconContainer--facebook {
   background-color: #3b5998; }
 .iconContainer.iconContainer--twitter {
