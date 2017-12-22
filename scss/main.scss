@@ -1,0 +1,45 @@
+@import 'profilePage';
+
+
+html, body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "Gotham";
+    font-style: normal;
+}
+
+//font imports
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham/Gotham-Book.otf") format('opentype');
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham/Gotham-Bold.otf") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham/Gotham-Light.otf") format('opentype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham/Gotham-Medium.otf") format('opentype');
+   	font-weight: 500;
+}
+

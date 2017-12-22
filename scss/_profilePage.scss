@@ -1,0 +1,365 @@
+
+
+//profile block
+.profileCard{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+
+//hex image block
+.hexagonImage{
+	position: absolute;
+	width: 137px; 
+	height: 79.10px;
+	margin: 39.55px 0;
+	background-image: url(http://www.math.uni-frankfurt.de/~person/_4170854.jpg);;
+	background-size: auto 158.1940px;
+	background-position: center;
+
+	&:after{
+		content: "";
+		position: absolute;
+		top: 0.0000px;
+		left: 0;
+		width: 137.0000px;
+		height: 79.0970px;
+		z-index: 2;
+		background: inherit;
+	}
+
+	//modifiers
+	&.hexagonImage--profile{
+		z-index: 1;
+		left: 50%;
+		transform: translate(-50%,12.5px);
+	}
+}
+
+	//elements for the hexagon Image
+	.hexagonImage__imageTop, 
+	.hexagonImage__imageBottom {
+		position: absolute;
+		z-index: 1;
+		width: 96.87px;
+		height: 96.87px;
+		overflow: hidden;
+		-webkit-transform: scaleY(0.5774) rotate(-45deg);
+		-ms-transform: scaleY(0.5774) rotate(-45deg);
+		transform: scaleY(0.5774) rotate(-45deg);
+		background: inherit;
+		left: 20.06px;
+		
+		&:after{
+			content: "";
+			position: absolute;
+			width: 137.0000px;
+			height: 79.09698687897874px;
+			-webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
+			-ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
+			transform:          rotate(45deg) scaleY(1.7321) translateY(-39.5485px);
+			-webkit-transform-origin: 0 0;
+			-ms-transform-origin: 0 0;
+			transform-origin: 0 0;
+			background: inherit;
+		}
+
+	}
+
+	.hexagonImage__imageTop{
+		top: -48.4368px;
+		&:after{
+			background-position: center top;
+		}
+	}
+	.hexagonImage__imageBottom{
+		bottom: -48.4368px;
+		&:after{
+			background-position: center bottom;
+		}
+	}
+
+
+
+//hexagon border elements
+.profileCard__hexagonBorderContainer{
+	position: relative;
+	width: 275px;
+	height: 92.38px;
+	padding-top: 1px;
+	overflow: hidden;
+}
+
+.profileCard__hexagonBorder{
+	position: relative;
+	width: 160px; 
+	height: 92.38px;
+	background-color: #ffffff;
+	margin: 46.19px 0;
+	border-left: solid 1px #333333;
+	border-right: solid 1px #333333;
+
+	&:before, &:after {
+		content: "";
+		position: absolute;
+		z-index: 1;
+		width: 113.14px;
+		height: 113.14px;
+		-webkit-transform: scaleY(0.5774) rotate(-45deg);
+		-ms-transform: scaleY(0.5774) rotate(-45deg);
+		transform: scaleY(0.5774) rotate(-45deg);
+		background-color: inherit;
+		left: 22.4315px;
+	}
+
+	&:before{
+		top: -56.5685px;
+		border-top: solid 1.4142px #333333;
+		border-right: solid 1.4142px #333333;
+	}
+
+	&:after{
+		bottom: -56.5685px;
+		border-bottom: solid 1.4142px #333333;
+		border-left: solid 1.4142px #333333;
+	}
+
+	&.profileCard__hexagonBorder--topHalf{
+		left: 50%;
+		transform: translateX(-50%);
+
+		//color
+		background-color: #ffffff;
+		border-left: solid 1px #333333;
+		border-right: solid 1px #333333;
+		&:before{
+			border-top: solid 1.4142px #333333;
+			border-right: solid 1.4142px #333333;
+		}
+		&:after{
+			border-bottom: solid 1.4142px #333333;
+			border-left: solid 1.4142px #333333;
+		}
+	}
+	&.profileCard__hexagonBorder--bottomHalf{
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translate(-50%,-92.38px);
+
+		//color
+		background-color: #303642;
+		border-left: solid 1px #ffffff;
+		border-right: solid 1px #ffffff;
+
+		&:before{
+			border-top: solid 1.4142px #ffffff;
+			border-right: solid 1.4142px #ffffff;
+		}
+		&:after{
+			border-bottom: solid 1.4142px #ffffff;
+			border-left: solid 1.4142px #ffffff;
+		}	
+	}
+}
+
+.profileCard__hexagonBorderBottomHalf{
+	
+	&:before{
+		top: -56.5685px;
+		border-top: solid 1.4142px #ffffff;
+		border-right: solid 1.4142px #ffffff;
+	}
+	&:after{
+		bottom: -56.5685px;
+		border-bottom: solid 1.4142px #ffffff;
+		border-left: solid 1.4142px #ffffff;
+	}
+}
+
+//elements --------
+.profileCard__body{
+	position: relative;
+	width: 275px;
+	height: 400px;
+	overflow: hidden;
+}
+.profileCard__background{
+	position: relative;
+	width: 100%;
+	height: 350px;
+	background-color: #303642;
+}
+
+.profileCard__whiteBorder{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 250px;
+	height: 375px;
+	border: 1px solid white;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+//icon block
+.iconContainer{
+	&.iconContainer--center{
+		//centering the icon
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&.iconContainer--profileMain{
+		width: 100%;
+		margin-top: 100px;
+		margin-bottom: 15px;
+	}
+
+	&.iconContainer--profileSocial{
+		flex: 1;
+	}
+
+	&.iconContainer--facebook{
+		background-color: #3b5998;
+	}
+	&.iconContainer--twitter{
+		background-color: #55acee;
+	}
+	&.iconContainer--linkedin{
+		background-color: #0077b5;
+	}
+
+	//icon animations
+	&.iconContainer--animationBump:hover{
+		.iconContainer__icon:before{
+			-webkit-animation: bump .25s ease-in-out;
+			-moz-animation: bump .25s ease-in-out;
+			animation: bump .25s ease-in-out;
+			cursor: pointer;
+		}
+	}
+
+}
+
+@keyframes bump {
+  33% {
+    transform: scale(1.3);
+  }
+  66% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+
+	//elements of the icon block
+	.iconContainer__icon{
+		color: white;
+		font-size: 1.9em;
+
+		&.iconContainer__icon--profileIcon{
+			color: #828999;
+		}
+
+		&.iconContainer__icon--profileSocial{
+			color: white;
+			font-size: 1.2em;
+			// transform: translateY(1px);
+		}
+	}
+
+//textcontainer block
+.textContainer{
+	p{
+		font-weight: 100;
+		color: white;
+		font-size: 1em;
+	}
+
+	//modifiers
+	&.textContainer--center{
+		//used for centering the text;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&.textContainer--profilePosition{
+		height: 20px;
+		width: 100%;
+
+		//capital letters
+		text-transform: uppercase;
+
+		//spacing
+		margin-top: 15px;
+		margin-bottom: 2.5px;
+	}
+	&.textContainer--profileCompany{
+		height: 10px;
+		width: 100%;
+
+		//spacing
+		margin-top: 2.5px;
+		margin-bottom: 15px;
+
+		p{
+			font-size: 0.65em;
+		}
+	}
+	&.textContainer--profileName{
+		width: 100%;
+		height: 20px;
+
+		//capital letters
+		text-transform: uppercase;
+
+		//spacing
+		margin-top: 15px;
+		margin-bottom: 2.5px;
+	}
+	&.textContainer--profileEmail{
+		width: 100%;
+		height: 10px;
+
+		//spacing
+		margin-top: 2.5px;
+
+		p{
+			font-size: 0.65em;
+		}
+	}
+}
+
+.horizontalDivider{
+	height: 1px;
+	width: 120px;
+	background-color: white;
+	
+	&.horizontalDivider--profile{
+		//profile spacing
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
+
+.profileCard__socialMediaContainer{
+	position: relative;
+	bottom: 0;
+	width: 275px;
+	height: 50px;
+}
+
+.profileCard__flexWrapper{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}

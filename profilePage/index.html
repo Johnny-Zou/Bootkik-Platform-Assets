@@ -3,56 +3,75 @@
 <head>
 	<title>Bootkik Profile Page</title>
 
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/ionicons.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/ionicons.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
 
 
-	<div id="profileContainer">
-		<div id="profileImageHexagon">
-			<div id="hexImageTop"></div>
-			<div id="hexImageBottom"></div>
+	<div class="profileCard">
+		<div class="hexagonImage hexagonImage--profile">
+			<div class="hexagonImage__imageTop"></div>
+			<div class="hexagonImage__imageBottom"></div>
 		</div>
-		<div id="hexagonContainer">
-			<div id="hexagonTopHalf"></div>
+
+		<div class="profileCard__hexagonBorderContainer">
+			<div class="profileCard__hexagonBorder profileCard__hexagonBorder--topHalf"></div>
 		</div>
-		<div id="rectangle">
-			<div id="background"></div>
-			<div id="whiteBorder">
-				<div id="profileIconContainer">
-					<i id="profileIcon" class="icon ion-information-circled"></i>
+
+		<div class="profileCard__body">
+			<div class="profileCard__background"></div>
+			<div class="profileCard__whiteBorder">
+
+
+
+				<div class="iconContainer iconContainer--center iconContainer--profileMain">
+					<i class="iconContainer__icon iconContainer__icon--profileIcon icon ion-information-circled"></i>
 				</div>
-				<div id="levelContainer">
-					<p>Level 5</p>
+
+
+				<div class="textContainer textContainer--center textContainer--profilePosition">
+					<p>GRAPHIC DESIGN LEAD</p>
 				</div>
-				<div id="horizontalDivider"></div>
-				<div id="nameContainer">
+
+				<div class="textContainer textContainer--center textContainer--profileCompany">
+					<p>Bootkik</p>
+				</div>
+
+				<div class="horizontalDivider horizontalDivider--profile"></div>
+
+				<div class="textContainer textContainer--center textContainer--profileName">
 					<p>KAROL BURATYNSKI</p>
 				</div>
-				<div id="emailContainer">
+
+				<div class="textContainer textContainer--center textContainer--profileEmail">
 					<p>karol@bootkik.com</p>
 				</div>
 			</div>
-			<div id="hexagonBottomHalf"></div>
+			<div class="profileCard__hexagonBorder profileCard__hexagonBorder--bottomHalf"></div>
 
-			<div id="socialMediaContainer">
-				<div id="flexWrapper">
-					<div id="facebook" class="socialCenter">
-						<i class="icon ion-social-facebook socialColor"></i>
+
+
+			<div class="profileCard__socialMediaContainer">
+				<div class="profileCard__flexWrapper">
+					<div id="facebook" class="iconContainer iconContainer--center iconContainer--profileSocial iconContainer--facebook iconContainer--animationBump">
+						<i class="iconContainer__icon iconContainer__icon--profileSocial icon ion-social-facebook"></i>
 					</div>
-					<div id="linkedin" class="socialCenter">
-						<i class="icon ion-social-linkedin-outline socialColor"></i>
+					<div id="linkedin" class="iconContainer iconContainer--center iconContainer--profileSocial iconContainer--linkedin iconContainer--animationBump">
+						<i class="iconContainer__icon iconContainer__icon--profileSocial icon ion-social-linkedin"></i>
 					</div>
-					<div id="googlePlus" class="socialCenter">
-						<i class="icon ion-social-google socialColor"></i>
+					<div id="twitter" class="iconContainer iconContainer--center iconContainer--profileSocial iconContainer--twitter iconContainer--animationBump">
+						<i class="iconContainer__icon iconContainer__icon--profileSocial icon ion-social-twitter"></i>
 					</div>
 				</div>
 			</div>
 		</div>
 		
+
+
+
 	</div>
 
 
