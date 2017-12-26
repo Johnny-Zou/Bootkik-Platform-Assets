@@ -1,61 +1,330 @@
-/*
-Error: File to import not found or unreadable: navMenu.
-       Load path: /Users/Johnny/Desktop/Coding/Github/Bootkik-Platform-Assets/scss
-        on line 3 of scss/main.scss
+.profileCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
 
-1: @import 'profilePage';
-2: @import 'headerAndFooter';
-3: @import 'navMenu';
-4: 
-5: html, body{
-6: 	margin: 0;
-7: 	padding: 0;
-8: 	border: 0;
+.hexagonImage {
+  position: absolute;
+  background-image: url(../img/profilePic.jpg);
+  background-size: auto 160px;
+  background-position: center;
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
+  .hexagonImage.hexagonImage--profile {
+    width: 140px;
+    height: 160px;
+    z-index: 1;
+    left: 50%;
+    background-size: auto 160px;
+    transform: translate(-50%, 12.5px); }
 
-Backtrace:
-scss/main.scss:3
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/import_node.rb:45:in `import'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Users/Johnny/.rvm/gems/ruby-2.4.1/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: navMenu.\A        Load path: /Users/Johnny/Desktop/Coding/Github/Bootkik-Platform-Assets/scss\A         on line 3 of scss/main.scss\A \A 1: @import 'profilePage';\A 2: @import 'headerAndFooter';\A 3: @import 'navMenu';\A 4: \A 5: html, body{\A 6: 	margin: 0;\A 7: 	padding: 0;\A 8: 	border: 0;"; }
+.profileCard__hexagonBorderContainer {
+  position: relative;
+  width: 275px;
+  height: 92.38px;
+  padding-top: 1px;
+  overflow: hidden; }
+
+.profileCard__hexagonBorder {
+  position: relative;
+  width: 160px;
+  height: 92.38px;
+  background-color: #ffffff;
+  margin: 46.19px 0;
+  border-left: solid 1px #333333;
+  border-right: solid 1px #333333; }
+  .profileCard__hexagonBorder:before, .profileCard__hexagonBorder:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 113.14px;
+    height: 113.14px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 22.4315px; }
+  .profileCard__hexagonBorder:before {
+    top: -56.5685px;
+    border-top: solid 1.4142px #333333;
+    border-right: solid 1.4142px #333333; }
+  .profileCard__hexagonBorder:after {
+    bottom: -56.5685px;
+    border-bottom: solid 1.4142px #333333;
+    border-left: solid 1.4142px #333333; }
+  .profileCard__hexagonBorder.profileCard__hexagonBorder--topHalf {
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border-left: solid 1px #333333;
+    border-right: solid 1px #333333; }
+    .profileCard__hexagonBorder.profileCard__hexagonBorder--topHalf:before {
+      border-top: solid 1.4142px #333333;
+      border-right: solid 1.4142px #333333; }
+    .profileCard__hexagonBorder.profileCard__hexagonBorder--topHalf:after {
+      border-bottom: solid 1.4142px #333333;
+      border-left: solid 1.4142px #333333; }
+  .profileCard__hexagonBorder.profileCard__hexagonBorder--bottomHalf {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -92.38px);
+    background-color: #303642;
+    border-left: solid 1px #ffffff;
+    border-right: solid 1px #ffffff; }
+    .profileCard__hexagonBorder.profileCard__hexagonBorder--bottomHalf:before {
+      border-top: solid 1.4142px #ffffff;
+      border-right: solid 1.4142px #ffffff; }
+    .profileCard__hexagonBorder.profileCard__hexagonBorder--bottomHalf:after {
+      border-bottom: solid 1.4142px #ffffff;
+      border-left: solid 1.4142px #ffffff; }
+
+.profileCard__hexagonBorderBottomHalf:before {
+  top: -56.5685px;
+  border-top: solid 1.4142px #ffffff;
+  border-right: solid 1.4142px #ffffff; }
+.profileCard__hexagonBorderBottomHalf:after {
+  bottom: -56.5685px;
+  border-bottom: solid 1.4142px #ffffff;
+  border-left: solid 1.4142px #ffffff; }
+
+.profileCard__body {
+  position: relative;
+  width: 275px;
+  height: 400px;
+  overflow: hidden; }
+
+.profileCard__background {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-color: #303642; }
+
+.profileCard__whiteBorder {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 375px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.iconContainer.iconContainer--center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.iconContainer.iconContainer--profileMain {
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 15px; }
+.iconContainer.iconContainer--profileSocial {
+  flex: 1;
+  backface-visibility: hidden; }
+.iconContainer.iconContainer--facebook {
+  background-color: #3b5998; }
+.iconContainer.iconContainer--twitter {
+  background-color: #55acee; }
+.iconContainer.iconContainer--linkedin {
+  background-color: #0077b5; }
+.iconContainer.iconContainer--animationBump:hover .iconContainer__icon:before {
+  -webkit-animation: bump .25s ease-in-out;
+  -moz-animation: bump .25s ease-in-out;
+  animation: bump .25s ease-in-out;
+  cursor: pointer; }
+
+@keyframes bump {
+  33% {
+    transform: scale(1.3); }
+  66% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+.iconContainer__icon {
+  color: white;
+  font-size: 1.9em; }
+  .iconContainer__icon.iconContainer__icon--profileIcon {
+    color: #828999; }
+  .iconContainer__icon.iconContainer__icon--profileSocial {
+    color: white;
+    font-size: 1.2em; }
+
+.textContainer p {
+  font-weight: 100;
+  color: white;
+  font-size: 1em; }
+.textContainer.textContainer--center {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+.textContainer.textContainer--profilePosition {
+  height: 20px;
+  width: 100%;
+  margin-bottom: 12.5px; }
+  .textContainer.textContainer--profilePosition p {
+    font-size: 0.8em; }
+.textContainer.textContainer--profileCompany {
+  height: 10px;
+  width: 100%;
+  margin-top: 12.5px;
+  margin-bottom: 3.5px; }
+  .textContainer.textContainer--profileCompany p {
+    font-size: 0.8em; }
+.textContainer.textContainer--profileName {
+  width: 100%;
+  height: 20px;
+  text-transform: uppercase;
+  margin-top: 15px; }
+  .textContainer.textContainer--profileName p {
+    font-size: 1.05em;
+    font-weight: 300; }
+.textContainer.textContainer--profileEmail {
+  width: 100%;
+  height: 10px;
+  margin-top: 3.5px; }
+  .textContainer.textContainer--profileEmail p {
+    font-size: 0.7em; }
+
+.horizontalDivider {
+  height: 1px;
+  width: 120px;
+  background-color: white; }
+  .horizontalDivider.horizontalDivider--profile {
+    margin-top: 15px;
+    margin-bottom: 15px; }
+
+.profileCard__socialMediaContainer {
+  position: relative;
+  bottom: 0;
+  width: 275px;
+  height: 50px; }
+
+.profileCard__flexWrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row; }
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0; }
+
+.textContainer.textContainer--footerPageTitle {
+  position: absolute;
+  left: 15px;
+  bottom: 20px;
+  text-transform: uppercase; }
+  .textContainer.textContainer--footerPageTitle p {
+    font-size: 1.5em;
+    color: #16191d; }
+
+.footer__angleBlock {
+  background-color: #16191d;
+  height: 35px;
+  clip-path: polygon(0 70%, 100% 0, 100% 100%, 0% 100%); }
+
+.header__flexWrapper {
+  display: flex;
+  position: absolute;
+  flex-direction: row;
+  right: 0;
+  height: 30px;
+  margin-top: 10px;
+  margin-right: 10px; }
+
+.header__logo {
+  position: relative;
+  height: 30px;
+  order: 1; }
+
+.textContainer.textContainer--headerBootkik {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  order: 2; }
+  .textContainer.textContainer--headerBootkik p {
+    color: #16191d;
+    font-size: 1.4em;
+    font-weight: 500; }
+.textContainer.textContainer--hidden {
+  display: none; }
+.textContainer.textContainer--avatarCredits {
+  position: absolute;
+  top: 40px;
+  left: calc(50% + 40px);
+  transform: translateY(-50%);
+  z-index: 999; }
+  .textContainer.textContainer--avatarCredits p {
+    color: #16191d;
+    font-size: 0.65em; }
+
+.avatar {
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.hexagonImage.hexagonImage--border {
+  background-image: none;
+  background-color: #16191d;
+  height: 42px;
+  width: 39px;
+  z-index: 1; }
+.hexagonImage.hexagonImage--avatarBorder {
+  height: 42px;
+  width: 39px;
+  left: 50%;
+  transform: translate(-50%, 20px); }
+.hexagonImage.hexagonImage--avatar {
+  background-image: url(../img/profilePic.jpg);
+  height: 40px;
+  width: 37px;
+  z-index: 1;
+  transform: translate(1px, 1px);
+  background-size: auto 40px; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden; }
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Gotham";
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham/Gotham-Book.otf") format("opentype");
+  font-style: normal;
+  font-weight: 300; }
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham/Gotham-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal; }
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham/Gotham-Light.otf") format("opentype");
+  font-weight: 100; }
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/gotham/Gotham-Medium.otf") format("opentype");
+  font-weight: 500; }
+
+/*# sourceMappingURL=main.css.map */
