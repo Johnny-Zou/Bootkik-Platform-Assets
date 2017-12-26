@@ -49,25 +49,70 @@
 	order: 1;
 
 }
+.textContainer{
+	&.textContainer--headerBootkik{
+		position: relative;
+		//move text tiny bit down
+		margin-top: 5px;
+		//padding between logo and text
+		margin-left: 5px;
+		margin-right: 5px;
 
-.textContainer--headerBootkik{
-	position: relative;
-	//move text tiny bit down
-	margin-top: 5px;
-	//padding between logo and text
-	margin-left: 5px;
-	margin-right: 5px;
 
+		order: 2;
 
-	order: 2;
+		p{
+			color: #16191d;
+			font-size: 1.4em;
+			font-weight: 500;
+		}
+	}
 
-	p{
-		color: #16191d;
-		font-size: 1.4em;
-		font-weight: 500;
+	&.textContainer--hidden{
+		display: none;
+	}
+
+	&.textContainer--avatarCredits{
+		position: absolute;
+		top: 40px;
+		left: calc(50% + 40px);
+		transform: translateY(-50%);
+		z-index: 999;
+		p{
+			color: #16191d;
+			font-size: 0.65em;
+		}
 	}
 }
 
-.textContainer--hidden{
-	display: none;
+
+.avatar{
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+.hexagonImage{
+	&.hexagonImage--border{
+		background-image: none;
+		background-color: #16191d;
+		height: 42px;
+		width: 39px;
+		z-index: 1;
+	}
+	&.hexagonImage--avatarBorder{
+
+		height: 42px; //height image + 2 times border width
+		width: 39px; //width image + 2 times border width
+		left: 50%;
+		transform: translate(-50%,20px);
+	}
+	&.hexagonImage--avatar{
+
+		background-image: url(../img/profilePic.jpg);
+		height: 40px;
+		width: 37px;
+		z-index: 1;
+		transform: translate(1px,1px); //1 px border
+		background-size: auto 40px;
+	}
 }

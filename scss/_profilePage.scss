@@ -13,7 +13,7 @@
 .hexagonImage{
 	position: absolute;
 
-	background-image: url(http://www.math.uni-frankfurt.de/~person/_4170854.jpg);;
+	background-image: url(../img/profilePic.jpg);
 	background-size: auto 160px;
 	background-position: center;
 	-webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -25,6 +25,7 @@
 		height: 160px;
 		z-index: 1;
 		left: 50%;
+		background-size: auto 160px;
 		transform: translate(-50%,12.5px);
 	}
 }
@@ -163,7 +164,7 @@
 	}
 	&.iconContainer--profileMain{
 		width: 100%;
-		margin-top: 100px;
+		margin-top: 120px;
 		margin-bottom: 15px;
 	}
 
@@ -241,23 +242,22 @@
 		height: 20px;
 		width: 100%;
 
-		//capital letters
-		text-transform: uppercase;
-
 		//spacing
-		margin-top: 15px;
-		margin-bottom: 2.5px;
+		margin-bottom: 12.5px;
+		p{
+			font-size:0.8em;
+		}
 	}
 	&.textContainer--profileCompany{
 		height: 10px;
 		width: 100%;
 
 		//spacing
-		margin-top: 2.5px;
-		margin-bottom: 15px;
+		margin-top: 12.5px;
+		margin-bottom: 3.5px;
 
 		p{
-			font-size: 0.65em;
+			font-size: 0.8em;
 		}
 	}
 	&.textContainer--profileName{
@@ -269,17 +269,20 @@
 
 		//spacing
 		margin-top: 15px;
-		margin-bottom: 2.5px;
+		p{
+			font-size: 1.05em;
+			font-weight: 300; //gotham book
+		}
 	}
 	&.textContainer--profileEmail{
 		width: 100%;
 		height: 10px;
 
 		//spacing
-		margin-top: 2.5px;
+		margin-top: 3.5px;
 
 		p{
-			font-size: 0.65em;
+			font-size: 0.7em;
 		}
 	}
 }
