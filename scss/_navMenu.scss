@@ -1,4 +1,122 @@
 //this is the sass file for the navMenu
-.mainMenu{
+.navMenu{
+	position: absolute;
+	z-index: 500; //place overtop everything
+	height: 100%;
+	width: 50%;
+	overflow: hidden;
+}
+
+.navMenu__background{
+	position: absolute;
+	background-color: #16191d;
+	width: 100%;
+	height: 100%;
+	-webkit-clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
+	transition: left 0.5s;
+	&.navMenu__background--active{
+		left: 0;
+	}
+	&.navMenu__background--hidden{
+		left: -100%;
+	}
+}
+
+.navMenu__list{
+	position: absolute;
+	margin-left: 50px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.navMenu__listElement{
+	list-style: none;
+	margin: 10px 15px 15px 10px;
+	color: white;
+	font-weight: 100;
+	font-style: normal;
+	font-size: 2.5em;
+	&:hover{
+		color: #3cbeb7;
+		cursor: pointer;
+	}
+}
+
+.navMenu__listElement--active{
+	color: #3cbeb7;
+	cursor: pointer;
+}
+
+.navMenu__button{
+	position: absolute;
+	left: 10px;
+	z-index: 1;
+}
+
+.navMenu__openButton{
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	margin-top: 5px;
+	&.navMenu__openButton--hidden{
+		display: none;
+	}
+}
+
+.closeButton{
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	&.closeButton--hidden{
+		display: none;
+	}
+}
+
+.iconContainer{
+	&.iconContainer--navMenuOpen{
+		order: 1;
+	}
+	&.iconContainer--closeButton{
+		order: 2;
+	}
+}
+
+
+.iconContainer__icon{
+	&.iconContainer__icon--navMenuOpen{
+		font-size: 1.5em;
+		margin-right: 5px;
+		color: #16191d;
+	}
+	&.iconContainer__icon--closeButton{
+		font-size: 2em;
+		margin-left: 5px;
+	}
 	
+}
+
+
+.textContainer{
+	&.textContainer--allCaps{
+		text-transform: uppercase;
+	}
+	&.textContainer--navMenuOpen{
+		order: 2;
+		p{
+			font-weight: 400;
+			font-size: 0.65em;
+			transform: translateY(-1px);
+			color: #16191d;
+		}
+	}
+	&.textContainer--closeButton{
+		order: 1;
+		p{
+			font-weight: 400;
+			font-size: 0.65em;
+			transform: translateY(-1px);
+		}
+	}
+
 }

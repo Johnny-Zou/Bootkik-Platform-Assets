@@ -6,6 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 	<link rel="stylesheet" type="text/css" href="../css/ionicons.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="../js/navMenu.js"></script>
 </head>
 <body>
 
@@ -17,20 +19,39 @@
 			</div>
 		</div>
 	</div>
-<!-- 
-	<nav class="mainMenu">
-		<div class="mainMenu__button">
-			<div class="open"></div>
-			<div class="close"></div>
+
+
+
+	<nav class="navMenu">
+		<div class="navMenu__button">
+			<div class="navMenu__openButton">
+				<div class="iconContainer iconContainer--center iconContainer--navMenuOpen">
+					<i class="iconContainer__icon iconContainer__icon--navMenuOpen icon ion-navicon"></i>
+				</div>
+				<div class="textContainer textContainer--center textContainer--allCaps textContainer--navMenuOpen">
+					<p>menu</p>
+				</div>
+			</div>
+			<div class="closeButton closeButton--hidden">
+				<div class="iconContainer iconContainer--center iconContainer--closeButton">
+					<i class="iconContainer__icon iconContainer__icon--closeButton icon ion-ios-close-empty "></i>
+				</div>
+				<div class="textContainer textContainer--center textContainer--allCaps textContainer--closeButton">
+					<p>close</p>
+				</div>
+			</div>
 		</div>
-		<div class="mainMenu__background"></div>
-		<ul class="mainMenu__list">
-			<li class="mainMenu__listElement">Learn</li>
-			<li class="mainMenu__listElement">Profile</li>
-			<li class="mainMenu__listElement">Credits</li>
-			<li class="mainMenu__listElement">Logout</li>
-		</ul>
-	</nav> -->
+		<div class="navMenu__background navMenu__background--hidden">
+			<ul class="navMenu__list">
+				<li class="navMenu__listElement">Learn</li>
+				<li class="navMenu__listElement">Profile</li>
+				<li class="navMenu__listElement">Credits</li>
+				<li class="navMenu__listElement">Logout</li>
+			</ul>
+		</div>
+	</nav>
+
+
 
 	<div class="avatar">
 		<div class="hexagonImage hexagonImage--border hexagonImage--avatarBorder">
